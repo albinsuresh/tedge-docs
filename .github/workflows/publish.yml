@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: publish github pages
         run: |
-          gh workflow run gh-pages.yml -R thin-edge/thin-edge.io
+          gh workflow run gh-pages.yml -R thin-edge/thin-edge.io -f update_search_index=true
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
